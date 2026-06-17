@@ -110,6 +110,7 @@
 
 .testimonial-card-footer .footer-content {
   position: absolute;
+  z-index: 1;
   top: 60%;
   right: 0;
   left: 0;

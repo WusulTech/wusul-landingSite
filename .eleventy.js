@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
+  eleventyConfig.ignores.add(".zip-review/**");
 
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
