@@ -154,7 +154,7 @@
 
 .ws-trusted-placeholder img {
   width: auto;
-  height: clamp(22px, 4vw, 28px);
+  height: 80px;
   opacity: 0.55;
   filter: grayscale(1);
   transition: var(--ws-ease);
