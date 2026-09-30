@@ -68,7 +68,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 {% endif %}
 <link rel="stylesheet" href="css/variables.css" />
-<link rel="stylesheet" href="css/style.css" />
+{# Same files and order as the @imports in css/style.css, loaded in parallel #}
+{% for file in cssFiles %}
+<link rel="stylesheet" href="{{ file }}" />
+{% endfor %}
 {% if extraStylesheets %}
 {% for sheet in extraStylesheets %}
 <link rel="stylesheet" href="{{ sheet }}" />

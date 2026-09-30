@@ -100,6 +100,14 @@
   background-position: 24% center;
 }
 
+/* Phones/tablets: half-size images (~4x fewer bytes) */
+@media (max-width: 768px) {
+  .bg-1 { background-image: url(../../assets/images/services/service-ai-integration-800.webp); }
+  .bg-2 { background-image: url(../../assets/images/services/service-cloud-saas-800.webp); }
+  .bg-3 { background-image: url(../../assets/images/services/service-digital-platforms-800.webp); }
+  .bg-4 { background-image: url(../../assets/images/services/service-product-design-800.webp); }
+}
+
 /* ─── Card ─── */
 .service-card {
   position: relative;

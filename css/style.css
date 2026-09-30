@@ -2,6 +2,9 @@
    style.css — Wusul Main Stylesheet
    Entry point: loads modular CSS in cascade order.
    Requires variables.css to be linked before this file.
+   Pages don't link this file: .eleventy.js reads the @import list
+   below and links each file directly (parallel download). Add new
+   files here as usual.
    ================================================ */
 
 /* Base */
