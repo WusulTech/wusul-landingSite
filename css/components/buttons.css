@@ -41,7 +41,9 @@
   text-decoration: none;
 }
 
-/* Icon inside a button (e.g. WhatsApp) */
-.ws-btn-primary i {
-  margin-inline-end: 0.45em;
+/* Icon inside a button (e.g. WhatsApp) — slightly larger than the text */
+.ws-btn-primary .ws-icon {
+  font-size: 1.3em;
+  vertical-align: -0.25em;
+  margin-inline-end: 0.4em;
 }

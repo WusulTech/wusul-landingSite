@@ -1,0 +1,13 @@
+/* ================================================
+   icons.css — Inline SVG icons ({% icon "name" %})
+   Sized by font-size and coloured by `color`, like the
+   Font Awesome glyphs they replace.
+   ================================================ */
+
+.ws-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  overflow: visible;
+}
