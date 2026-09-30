@@ -89,6 +89,52 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
         });
       });
 
+/* Contact form — send via FormSubmit (AJAX), plain POST if JS is off */
+(function () {
+  var form = document.getElementById("contactForm");
+  if (!form) return;
+
+  var status = document.getElementById("contactFormStatus");
+  var btn = form.querySelector('button[type="submit"]');
+
+  function setStatus(msg, type) {
+    status.textContent = msg;
+    status.className = "ws-form__status" + (type ? " is-" + type : "");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    btn.disabled = true;
+    setStatus("Sending…");
+
+    fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(form),
+    })
+      .then(function (res) {
+        return res.json().then(function (data) {
+          if (!res.ok || String(data.success) !== "true") throw new Error(data.message);
+        });
+      })
+      .then(function () {
+        form.reset();
+        setStatus("Thanks! Your idea reached us — we'll get back to you within 24 hours.", "success");
+      })
+      .catch(function () {
+        setStatus("Something went wrong. Please try again or message us on WhatsApp.", "error");
+      })
+      .then(function () {
+        btn.disabled = false;
+      });
+  });
+})();
+
 /* Stats band — count-up + scroll trigger */
 (function () {
   var band = document.querySelector(".ws-stats-band");

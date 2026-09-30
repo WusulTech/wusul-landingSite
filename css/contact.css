@@ -275,6 +275,34 @@
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.40);
 }
 
+.ws-form__btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+.ws-form__status {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ws-text-muted);
+}
+
+.ws-form__status:empty {
+  display: none;
+}
+
+.ws-form__status.is-success {
+  color: #15803d;
+}
+
+.ws-form__status.is-error {
+  color: #b91c1c;
+}
+
+.ws-info-card__val a {
+  color: inherit;
+}
+
 /* ── Responsive ───────────────────────────────── */
 
 /* Tablet / mobile — info block first, then form */
