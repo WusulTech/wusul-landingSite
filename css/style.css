@@ -14,8 +14,6 @@
 @import url("components/navbar.css");
 @import url("components/icons.css");
 @import url("components/buttons.css");
-@import url("components/whatsapp.css");
-
 /* Page sections (DOM order) */
 @import url("sections/hero.css");
 @import url("sections/services.css");
