@@ -5,30 +5,38 @@
           <div class="col-lg-9 col-xl-8 text-center">
             <!-- Top badge -->
             <div class="ws-badge-pill" data-aos="fade-down">
-              Launch your product. Reach your digital peak with Wosoul.
+              For online stores, startups &amp; growing businesses across the Gulf
             </div>
 
-            <!-- Headline -->
-            <h1 class="ws-hero-h1" data-aos="fade-up" data-aos-delay="100">
-              Your software development partner handles everything
-            </h1>
-            <h1
-              class="ws-hero-h1 ws-hero-h1--blue"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              no bugs , no crashes.
+            <!-- Headline (single h1 for SEO) -->
+            <h1 class="ws-hero-h1 ws-hero-h1--split">
+              <span class="ws-hero-h1__line" data-aos="fade-up" data-aos-delay="100">
+                Your complete tech team, without hiring one
+              </span>
+              <span
+                class="ws-hero-h1__line ws-hero-h1--blue"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                from idea to launch, and beyond.
+              </span>
             </h1>
 
             <!-- Description -->
             <p class="ws-hero-desc" data-aos="fade-up" data-aos-delay="300">
-             Ongoing software development and technical support for growing businesses that need reliability, 
-            speed, and peace of mind, without hiring an in-house team or juggling multiple freelancers.
+              Have an idea, an online store, or a business that needs reliable tech support?
+              We design, build, and maintain your website, app, or platform, so you can focus
+              on growth instead of bugs and juggling freelancers.
             </p>
 
             <!-- Buttons -->
             <div class="ws-hero-btns" data-aos="fade-up" data-aos-delay="400">
-              <a href="#contact" class="btn ws-btn-primary">Free - Quick Review</a>
+              <a
+                href="https://wa.me/{{ site.whatsapp }}?text={{ 'Hello Wusul, I\'d like a free quick review of my project.' | urlencode }}"
+                class="btn ws-btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><i class="fa-brands fa-whatsapp"></i> Free Quick Review</a>
               <a href="#services" class="btn ws-btn-outline">Our Services</a>
             </div>
           </div>
@@ -36,21 +44,13 @@
 
         <!-- Trusted by — directly under CTAs (Stripe-style) -->
         <div class="ws-trusted ws-trusted--hero text-center" data-aos="fade-up" data-aos-delay="500">
-          <p class="ws-trusted-title">Trusted by ambitious eCommerce teams</p>
-          <img
-            src="assets/images/trusted-logos.png"
-            alt="Trusted by our partners"
-            class="ws-trusted-img"
-            onerror="
-              this.style.display = 'none';
-              this.nextElementSibling.style.display = 'flex';"
-          />
+          <p class="ws-trusted-title">Trusted by ambitious brands</p>
           <div class="ws-trusted-placeholder">
-            <span><img src="assets/images/عممران.png" alt="" /></span>
-            <span><img src="assets/images/بصمة.png" alt="" /></span>
-            <span><img src="assets/images/sodo.png" alt="" /></span>
-            <span><img src="assets/images/melora.png" alt="" /></span>
-            <span><img src="assets/images/bita.png" alt="" /></span>
+            <span><img src="assets/images/logos/logo-omran.webp" alt="Omran" loading="lazy" /></span>
+            <span><img src="assets/images/logos/logo-basma.webp" alt="Basma" loading="lazy" /></span>
+            <span><img src="assets/images/logos/logo-sodo.webp" alt="SODO" loading="lazy" /></span>
+            <span><img src="assets/images/logos/logo-melora.webp" alt="Melora" loading="lazy" /></span>
+            <span><img src="assets/images/logos/logo-bita.webp" alt="BITA" loading="lazy" /></span>
           </div>
         </div>
 

@@ -16,7 +16,7 @@
             <!-- Blue visual card -->
             <div class="ws-contact__visual">
               <div class="ws-bubbles">
-                <img src="assets/images/CTA ENGLISH.png" role="img" aria-label="Abstract blue bubbles" alt="Abstract blue bubbles" />
+                <img src="assets/images/contact-visual.webp" role="img" aria-label="Abstract blue bubbles" alt="Abstract blue bubbles" />
               </div>
             </div>
 
@@ -28,17 +28,17 @@
                 </div>
                 <div>
                   <h6 class="ws-info-card__title">Email</h6>
-                  <p class="ws-info-card__val">contact@wusul.tech</p>
+                  <p class="ws-info-card__val"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
                 </div>
               </div>
 
               <div class="ws-info-card">
                 <div class="ws-info-card__icon">
-                  <i class="fas fa-phone"></i>
+                  <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div>
-                  <h6 class="ws-info-card__title">Phone</h6>
-                  <p class="ws-info-card__val">+970 123 456 789</p>
+                  <h6 class="ws-info-card__title">WhatsApp</h6>
+                  <p class="ws-info-card__val"><a href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMessage | urlencode }}" target="_blank" rel="noopener noreferrer" dir="ltr">{{ site.whatsappDisplay }}</a></p>
                 </div>
               </div>
 
@@ -76,54 +76,81 @@
               back to you within 24 hours.
             </p>
 
-            <div class="ws-form">
+            <form
+              class="ws-form"
+              id="contactForm"
+              action="https://formsubmit.co/{{ site.email }}"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New project inquiry — wusul.tech" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off" />
+
               <div class="ws-field">
-                <label class="ws-field__label">Full Name <span>*</span></label>
+                <label class="ws-field__label" for="cf-name">Full Name <span>*</span></label>
                 <input
                   type="text"
+                  id="cf-name"
+                  name="name"
                   class="ws-field__input"
                   placeholder="Example: Yousef Samy"
+                  autocomplete="name"
+                  required
                 />
               </div>
 
               <div class="ws-field">
-                <label class="ws-field__label"
+                <label class="ws-field__label" for="cf-email"
                   >Email Address <span>*</span></label
                 >
                 <input
                   type="email"
+                  id="cf-email"
+                  name="email"
                   class="ws-field__input"
                   placeholder="Example: example@email.com"
+                  autocomplete="email"
+                  required
                 />
               </div>
 
               <div class="ws-field">
-                <label class="ws-field__label"
-                  >Phone Number <span>*</span></label
+                <label class="ws-field__label" for="cf-phone"
+                  >Phone / WhatsApp <span>*</span></label
                 >
                 <input
                   type="tel"
+                  id="cf-phone"
+                  name="phone"
                   class="ws-field__input"
-                  placeholder="Example: +970 59-770-5019"
+                  placeholder="Example: +966 5X XXX XXXX"
+                  autocomplete="tel"
+                  required
                 />
               </div>
 
               <div class="ws-field">
-                <label class="ws-field__label"
+                <label class="ws-field__label" for="cf-type"
                   >Project Type <span>*</span></label
                 >
                 <input
                   type="text"
+                  id="cf-type"
+                  name="project_type"
                   class="ws-field__input"
                   placeholder="Example: E-commerce, Dash or SaaS Redesign"
+                  required
                 />
               </div>
 
               <div class="ws-field">
-                <label class="ws-field__label">Message <span>*</span></label>
+                <label class="ws-field__label" for="cf-message">Message <span>*</span></label>
                 <textarea
+                  id="cf-message"
+                  name="message"
                   class="ws-field__input ws-field__textarea"
                   placeholder="Example: I have a great idea for an app or website and need expert consultation on UI/UX design and development to bring this idea to life."
+                  required
                 ></textarea>
               </div>
 
@@ -147,7 +174,8 @@
                 </svg>
                 Send The Idea
               </button>
-            </div>
+              <p class="ws-form__status" id="contactFormStatus" role="status" aria-live="polite"></p>
+            </form>
           </div>
         </div>
 

@@ -47,6 +47,19 @@
   color: var(--ws-primary);
 }
 
+/* One h1 rendered as two lines */
+.ws-hero-h1--split {
+  margin-bottom: 0;
+}
+
+.ws-hero-h1__line {
+  display: block;
+}
+
+.ws-hero-h1__line + .ws-hero-h1__line {
+  margin-top: 0.75rem;
+}
+
 .ws-hero-desc {
   max-width: 35rem;
   margin: 0 auto 2rem;
