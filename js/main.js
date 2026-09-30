@@ -22,6 +22,28 @@ if (typeof AOS !== "undefined") {
   });
 })();
 
+/* Mobile menu toggle (replaces Bootstrap collapse + jQuery) */
+(function () {
+  var toggle = document.getElementById("navToggle");
+  var menu = document.getElementById("navMenu");
+  if (!toggle || !menu) return;
+
+  function setOpen(open) {
+    menu.classList.toggle("show", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  toggle.addEventListener("click", function () {
+    setOpen(!menu.classList.contains("show"));
+  });
+
+  menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      setOpen(false);
+    });
+  });
+})();
+
 /* Navbar shadow on scroll */
 (function () {
   const nav = document.getElementById("mainNav");

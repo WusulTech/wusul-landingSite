@@ -1,7 +1,14 @@
 {
   "name": "Wusul",
+  "url": "https://wusul.tech",
+  "ogImage": "/assets/images/og-image.png",
   "email": "hello@wusul.tech",
   "whatsapp": "970595612365",
   "whatsappDisplay": "+970 59 561 2365",
-  "whatsappMessage": "Hello Wusul, I'd like to discuss a project."
+  "whatsappMessage": "Hello Wusul, I'd like to discuss a project.",
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/wusul-tech/",
+    "instagram": "https://www.instagram.com/wusul.tech/",
+    "x": "https://x.com"
+  }
 }
