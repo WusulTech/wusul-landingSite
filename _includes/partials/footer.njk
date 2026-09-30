@@ -42,7 +42,7 @@
       <div class="ws-footer__col">
         <h6 class="ws-footer__heading">Connect</h6>
         <ul class="ws-footer__links">
-          <li><a href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMessage | urlencode }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> <span dir="ltr">{{ site.whatsappDisplay }}</span></a></li>
+          <li><a href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsappMessage | urlencode }}" target="_blank" rel="noopener noreferrer">{% icon "whatsapp" %} <span dir="ltr">{{ site.whatsappDisplay }}</span></a></li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>

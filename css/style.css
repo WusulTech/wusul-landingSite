@@ -12,6 +12,7 @@
 
 /* Shared components */
 @import url("components/navbar.css");
+@import url("components/icons.css");
 @import url("components/buttons.css");
 @import url("components/whatsapp.css");
 

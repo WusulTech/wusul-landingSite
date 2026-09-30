@@ -10,6 +10,22 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addWatchTarget("css/style.css");
 
+  // Inline SVG icons: {% icon "whatsapp" %}
+  eleventyConfig.addShortcode("icon", require("./lib/icons.js"));
+
+  // Bootstrap 4.6.2 CSS trimmed to the selectors our pages actually use
+  // (~158KB -> a few KB). Classes added only by JS must be safelisted.
+  eleventyConfig.on("eleventy.after", async ({ dir }) => {
+    const { PurgeCSS } = require("purgecss");
+    const [result] = await new PurgeCSS().purge({
+      content: [`${dir.output}/**/*.html`, "js/**/*.js"],
+      css: [require.resolve("bootstrap/dist/css/bootstrap.min.css")],
+      safelist: ["show", "collapse", "collapsing", "open", "loaded", "is-success", "is-error"],
+    });
+    fs.mkdirSync(`${dir.output}/css/vendor`, { recursive: true });
+    fs.writeFileSync(`${dir.output}/css/vendor/bootstrap.min.css`, result.css);
+  });
+
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add(".zip-review/**");
 

@@ -7,6 +7,8 @@
     "start": "eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "bootstrap": "^4.6.2",
+    "purgecss": "^7.0.2"
   }
 }

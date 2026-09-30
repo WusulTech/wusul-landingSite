@@ -40,8 +40,3 @@
   transform: translateY(-1px);
   text-decoration: none;
 }
-
-/* Icon inside a button (e.g. WhatsApp) */
-.ws-btn-primary i {
-  margin-inline-end: 0.45em;
-}
