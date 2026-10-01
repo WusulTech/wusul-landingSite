@@ -24,10 +24,11 @@
       <div class="ws-footer__col">
         <h6 class="ws-footer__heading">SERVICES</h6>
         <ul class="ws-footer__links">
-          <li><a href="#">UI/UX Design</a></li>
-          <li><a href="#">Product Strategy</a></li>
-          <li><a href="#">Web Development</a></li>
-          <li><a href="#">Digital Redesign</a></li>
+          {% set homeBase = "" if isHome else "/" %}
+          <li><a href="{{ homeBase }}#service-ai">AI Integration</a></li>
+          <li><a href="{{ homeBase }}#service-saas">SaaS &amp; Cloud Platforms</a></li>
+          <li><a href="{{ homeBase }}#service-web">Websites, Stores &amp; Apps</a></li>
+          <li><a href="{{ homeBase }}#service-design">Product Design</a></li>
         </ul>
       </div>
 

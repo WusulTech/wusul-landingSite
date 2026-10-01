@@ -1,7 +1,7 @@
-/* Section — tech stack marquee */
+/* Section — tech stack marquee (compact strip near the end of the page) */
 
 .ws-tech {
-  padding: clamp(3rem, 6vw, 5rem) 0 clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(2rem, 4vw, 3rem) 0 clamp(1.5rem, 3vw, 2.25rem);
   overflow: hidden;
   background: var(--ws-bg-page);
 }
@@ -11,38 +11,19 @@
 }
 
 .ws-tech__header {
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   padding: 0 1rem;
 }
 
-.ws-tech__badge {
-  display: inline-block;
-  margin-bottom: 1.1rem;
-  padding: 0.3rem 1rem;
-  border: 1px solid var(--ws-primary-border);
-  border-radius: 999px;
-  background: var(--ws-primary-light);
-  font-family: var(--ws-font-body);
-  font-size: clamp(0.75rem, 2vw, 0.82rem);
-  color: var(--ws-primary);
-}
-
+/* Small uppercase label, same style as "Trusted by ambitious brands" */
 .ws-tech__title {
-  margin: 0 0 0.75rem;
-  font-family: var(--ws-font-display);
-  font-weight: 800;
-  font-size: clamp(1.25rem, 3.5vw, 2.1rem);
-  letter-spacing: -0.02em;
-  color: var(--ws-primary);
-}
-
-.ws-tech__sub {
-  max-width: 32.5rem;
-  margin: 0 auto;
+  margin: 0;
   font-family: var(--ws-font-body);
-  font-size: clamp(0.875rem, 2.2vw, 0.95rem);
-  line-height: 1.6;
-  color: var(--ws-text-body);
+  font-weight: 600;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ws-text-muted);
 }
 
 .ws-marquee {
