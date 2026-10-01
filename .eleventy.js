@@ -10,6 +10,9 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addWatchTarget("css/style.css");
 
+  // Cache-busting token for CSS/JS links: unique per build/deploy
+  eleventyConfig.addGlobalData("buildId", Date.now().toString(36));
+
   // Inline SVG icons: {% icon "whatsapp" %}
   eleventyConfig.addShortcode("icon", require("./lib/icons.js"));
 

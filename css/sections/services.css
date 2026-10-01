@@ -56,7 +56,7 @@
 }
 
 .bg-1 {
-  background-image: url(../../assets/images/services/service-product-design.webp);
+  background-image: url(../../assets/images/services/service-design-engineering.webp);
   background-position: left center;
 }
 
@@ -77,7 +77,7 @@
 
 /* Phones/tablets: half-size images (~4x fewer bytes) */
 @media (max-width: 768px) {
-  .bg-1 { background-image: url(../../assets/images/services/service-product-design-800.webp); }
+  .bg-1 { background-image: url(../../assets/images/services/service-design-engineering-800.webp); }
   .bg-2 { background-image: url(../../assets/images/services/service-web-platforms-800.webp); }
   .bg-3 { background-image: url(../../assets/images/services/service-saas-cloud-800.webp); }
   .bg-4 { background-image: url(../../assets/images/services/service-mobile-apps-800.webp); }
