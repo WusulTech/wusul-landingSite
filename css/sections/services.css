@@ -81,31 +81,31 @@
 }
 
 .bg-1 {
-  background-image: url(../../assets/images/services/service-ai-integration.webp);
-  background-position: 78% center;
+  background-image: url(../../assets/images/services/service-product-design.webp);
+  background-position: left center;
 }
 
 .bg-2 {
-  background-image: url(../../assets/images/services/service-cloud-saas.webp);
-  background-position: 22% center;
+  background-image: url(../../assets/images/services/service-web-platforms.webp);
+  background-position: right center;
 }
 
 .bg-3 {
-  background-image: url(../../assets/images/services/service-digital-platforms.webp);
-  background-position: 76% center;
+  background-image: url(../../assets/images/services/service-saas-cloud.webp);
+  background-position: left center;
 }
 
 .bg-4 {
-  background-image: url(../../assets/images/services/service-product-design.webp);
-  background-position: 24% center;
+  background-image: url(../../assets/images/services/service-mobile-apps.webp);
+  background-position: right center;
 }
 
 /* Phones/tablets: half-size images (~4x fewer bytes) */
 @media (max-width: 768px) {
-  .bg-1 { background-image: url(../../assets/images/services/service-ai-integration-800.webp); }
-  .bg-2 { background-image: url(../../assets/images/services/service-cloud-saas-800.webp); }
-  .bg-3 { background-image: url(../../assets/images/services/service-digital-platforms-800.webp); }
-  .bg-4 { background-image: url(../../assets/images/services/service-product-design-800.webp); }
+  .bg-1 { background-image: url(../../assets/images/services/service-product-design-800.webp); }
+  .bg-2 { background-image: url(../../assets/images/services/service-web-platforms-800.webp); }
+  .bg-3 { background-image: url(../../assets/images/services/service-saas-cloud-800.webp); }
+  .bg-4 { background-image: url(../../assets/images/services/service-mobile-apps-800.webp); }
 }
 
 /* ─── Card ─── */
