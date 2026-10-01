@@ -35,6 +35,7 @@
   /* ── Typography ────────────────────────────── */
   --ws-font-display:   'Sora', sans-serif;
   --ws-font-body:      'Inter', sans-serif;
+  --ws-font-services:  'Plus Jakarta Sans', sans-serif; /* Our Services (Figma) */
 
   /* ── Radius ─────────────────────────────────── */
   --ws-radius-pill:    999px;
