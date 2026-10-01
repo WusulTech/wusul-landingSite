@@ -55,57 +55,32 @@
   background-position: center;
 }
 
-/* Scrim — card side readable, imagery stays bold on opposite side */
-.service-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(237, 238, 242, 0.96) 0%,
-    rgba(237, 238, 242, 0.82) 28%,
-    rgba(237, 238, 242, 0.35) 46%,
-    transparent 62%
-  );
-  opacity: 1;
-}
-
-.service-item:has(.service-card.right) .service-bg::before {
-  background: linear-gradient(
-    270deg,
-    rgba(237, 238, 242, 0.96) 0%,
-    rgba(237, 238, 242, 0.82) 28%,
-    rgba(237, 238, 242, 0.35) 46%,
-    transparent 62%
-  );
-}
-
 .bg-1 {
-  background-image: url(../../assets/images/services/service-ai-integration.webp);
-  background-position: 78% center;
+  background-image: url(../../assets/images/services/service-design-engineering.webp);
+  background-position: left center;
 }
 
 .bg-2 {
-  background-image: url(../../assets/images/services/service-cloud-saas.webp);
-  background-position: 22% center;
+  background-image: url(../../assets/images/services/service-web-platforms.webp);
+  background-position: right center;
 }
 
 .bg-3 {
-  background-image: url(../../assets/images/services/service-digital-platforms.webp);
-  background-position: 76% center;
+  background-image: url(../../assets/images/services/service-saas-cloud.webp);
+  background-position: left center;
 }
 
 .bg-4 {
-  background-image: url(../../assets/images/services/service-product-design.webp);
-  background-position: 24% center;
+  background-image: url(../../assets/images/services/service-mobile-apps.webp);
+  background-position: right center;
 }
 
 /* Phones/tablets: half-size images (~4x fewer bytes) */
 @media (max-width: 768px) {
-  .bg-1 { background-image: url(../../assets/images/services/service-ai-integration-800.webp); }
-  .bg-2 { background-image: url(../../assets/images/services/service-cloud-saas-800.webp); }
-  .bg-3 { background-image: url(../../assets/images/services/service-digital-platforms-800.webp); }
-  .bg-4 { background-image: url(../../assets/images/services/service-product-design-800.webp); }
+  .bg-1 { background-image: url(../../assets/images/services/service-design-engineering-800.webp); }
+  .bg-2 { background-image: url(../../assets/images/services/service-web-platforms-800.webp); }
+  .bg-3 { background-image: url(../../assets/images/services/service-saas-cloud-800.webp); }
+  .bg-4 { background-image: url(../../assets/images/services/service-mobile-apps-800.webp); }
 }
 
 /* ─── Card ─── */
@@ -115,16 +90,17 @@
   width: min(100%, 520px);
   height: auto;
   margin: 0 5vw;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.95);
+  /* Dark frosted glass: translucent navy so the image shows through, blurred */
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
   padding: 2.25rem 2.5rem;
   box-shadow:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 20px 50px rgba(15, 23, 42, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+    0 1px 2px rgba(15, 23, 42, 0.1),
+    0 20px 50px rgba(15, 23, 42, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -156,8 +132,8 @@
   border-color: var(--ws-primary-border);
   box-shadow:
     0 2px 4px rgba(15, 23, 42, 0.05),
-    0 28px 60px rgba(37, 99, 235, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
+    0 28px 60px rgba(37, 99, 235, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .service-card__index {
@@ -197,7 +173,7 @@
   font-family: var(--ws-font-display);
   font-size: clamp(1.15rem, 2.2vw, 1.45rem);
   font-weight: 700;
-  color: var(--ws-text-dark);
+  color: #ffffff;
   line-height: 1.3;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
@@ -210,10 +186,19 @@
   margin-bottom: 1rem;
 }
 
+.service-lead {
+  font-family: var(--ws-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
 .service-detail {
   font-family: var(--ws-font-body);
   font-size: 0.9375rem;
-  color: var(--ws-text-body);
+  color: #cbd5e1;
   line-height: 1.75;
   margin: 0;
 }
@@ -462,16 +447,6 @@
 
   .service-bg {
     background-position: center 30%;
-  }
-
-  .service-bg::before,
-  .service-item:has(.service-card.right) .service-bg::before {
-    background: linear-gradient(
-      180deg,
-      rgba(237, 238, 242, 0.94) 0%,
-      rgba(237, 238, 242, 0.78) 45%,
-      rgba(237, 238, 242, 0.35) 100%
-    );
   }
 
   .service-card,
